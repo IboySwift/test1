@@ -1,52 +1,59 @@
 //
-//  TaskTableTableViewController.swift
+//  TableViewController.swift
 //  test
 //
-//  Created by Ethan CHIANG on 2023/6/25.
+//  Created by Ethan CHIANG on 2023/7/8.
+
 //
 
 import UIKit
+import CoreData
 
-class TaskTableTableViewController: UITableViewController {
-    //宣告task物件
-    var task:[TaskMO]=[]
 
-    @IBOutlet var taskTextField: UITableView!
+class AddTaskController: UITableViewController {
     
+    
+  
+    var task = TaskMO!
+    if let appDelegate = (UIApplication.shared.delegate as? AppDelegate){
+        task = TaskMO(context:AppDelegate.persistentContainer.viewContext)
+        task.name = taskTextField.text
+        
+        appDelegate.saveContext()
+    }
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        taskTextField.frame = CGRect(x: 6, y: 7, width: 13, height: 13)
-        
-        
-        //         Uncomment the following line to preserve selection between presentations
-//         self.clearsSelectionOnViewWillAppear = false
-//
-//         Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-//         self.navigationItem.rightBarButtonItem = self.editButtonItem
+
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return 0
+//    }
+//
+//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        // #warning Incomplete implementation, return the number of rows
+//        return 0
+//    }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return task.count
-    }
-
-
+    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellIdentifier = "Cell"
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+
         // Configure the cell...
-        //從task陣列去得索引項目（indexPath）指定文字標籤（textLabel）要顯示的文字（.text）
-        cell.textLabel?.text = task[indexPath.row].name
 
         return cell
     }
+    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -64,7 +71,7 @@ class TaskTableTableViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }
+        }    
     }
     */
 

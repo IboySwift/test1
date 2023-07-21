@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AA5F917C2A43F2FD007166CE /* test.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AA5F917A2A43F2FD007166CE /* test.xcdatamodeld */; };
 		AA83B84E2A481CFC006E2016 /* TaskTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA83B84D2A481CFC006E2016 /* TaskTableTableViewController.swift */; };
+		AAC096982A59205800B62B61 /* AddTaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC096972A59205800B62B61 /* AddTaskController.swift */; };
 		AAC985232A1B8CBA00DE0723 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC985222A1B8CBA00DE0723 /* AppDelegate.swift */; };
 		AAC985252A1B8CBA00DE0723 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC985242A1B8CBA00DE0723 /* SceneDelegate.swift */; };
 		AAC985272A1B8CBA00DE0723 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC985262A1B8CBA00DE0723 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		AA5F917B2A43F2FD007166CE /* task.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = task.xcdatamodel; sourceTree = "<group>"; };
 		AA83B84D2A481CFC006E2016 /* TaskTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableTableViewController.swift; sourceTree = "<group>"; };
+		AAC096972A59205800B62B61 /* AddTaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskController.swift; sourceTree = "<group>"; };
 		AAC9851F2A1B8CBA00DE0723 /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAC985222A1B8CBA00DE0723 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAC985242A1B8CBA00DE0723 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				AAC985302A1B8CC200DE0723 /* Info.plist */,
 				AA5F917A2A43F2FD007166CE /* test.xcdatamodeld */,
 				AA83B84D2A481CFC006E2016 /* TaskTableTableViewController.swift */,
+				AAC096972A59205800B62B61 /* AddTaskController.swift */,
 			);
 			path = test;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA83B84E2A481CFC006E2016 /* TaskTableTableViewController.swift in Sources */,
+				AAC096982A59205800B62B61 /* AddTaskController.swift in Sources */,
 				AA5F917C2A43F2FD007166CE /* test.xcdatamodeld in Sources */,
 				AAC985272A1B8CBA00DE0723 /* ViewController.swift in Sources */,
 				AAC985232A1B8CBA00DE0723 /* AppDelegate.swift in Sources */,
@@ -297,6 +301,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = test/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "這裡可以設定名字";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -324,6 +329,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = test/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "這裡可以設定名字";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

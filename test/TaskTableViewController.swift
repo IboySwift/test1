@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TaskTableTableViewController: UITableViewController {
+class TaskTableViewController: UITableViewController {
     //宣告task物件
     var task:[TaskMO]=[]
 

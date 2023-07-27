@@ -11,21 +11,21 @@ import CoreData
 
 
 class AddTaskController: UITableViewController {
-    
-    
   
-    var task = TaskMO!
-    if let appDelegate = (UIApplication.shared.delegate as? AppDelegate){
-        task = TaskMO(context:AppDelegate.persistentContainer.viewContext)
-        task.name = taskTextField.text
-        
-        appDelegate.saveContext()
-    }
+    var task:TaskMO!
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
+            task = TaskMO(context: appDelegate.persistentContainer.viewContext)
+            task.name = nameTextField.text
+
+
+            appDelegate.saveContext()
+        }
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
